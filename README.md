@@ -1,6 +1,5 @@
-# One Month Rails
+# Oozly
 
-This is the sample application, Pinteresting for 
+This is the sample application,  for building on the one month rails concepts.
 [*One Month Rails*](http://onemonthrails.com)
 
-Johan Test
