@@ -5777,3 +5777,302 @@ Processing by PinsController#index as HTML
   Rendered pins/index.html.erb within layouts/application (14.7ms)
   Rendered layouts/_header.html.erb (0.4ms)
 Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFollows (20140724082157)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "follows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_type" varchar(255), "follower_id" integer, "followable_type" varchar(255), "followable_id" integer, "created_at" datetime) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "fk_follows" ON "follows" ("follower_id", "follower_type")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_follows' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_follows' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "fk_followables" ON "follows" ("followable_id", "followable_type")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140724082157"]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLikes (20140724082158)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "liker_type" varchar(255), "liker_id" integer, "likeable_type" varchar(255), "likeable_id" integer, "created_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "fk_likes" ON "likes" ("liker_id", "liker_type")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_likes' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_likes' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "fk_likeables" ON "likes" ("likeable_id", "likeable_type")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140724082158"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to CreateMentions (20140724082159)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "mentions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mentioner_type" varchar(255), "mentioner_id" integer, "mentionable_type" varchar(255), "mentionable_id" integer, "created_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "fk_mentions" ON "mentions" ("mentioner_id", "mentioner_type")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_mentions' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_mentions' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "fk_mentionables" ON "mentions" ("mentionable_id", "mentionable_type")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140724082159"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_followables' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_followables' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_follows' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_follows' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_likeables' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_likeables' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_likes' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_likes' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_mentionables' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_mentionables' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='fk_mentions' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='fk_mentions' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pins_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pins_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 10:36:56 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (31.2ms)
+  Rendered layouts/_header.html.erb (13.1ms)
+Completed 500 Internal Server Error in 261ms
+
+ActionView::Template::Error (undefined local variable or method `user_show_path' for #<#<Class:0x007fd83896b410>:0x007fd83896a920>):
+    15:     <ul class="nav navbar-nav navbar-right">
+    16:         <li><%= link_to "Home", root_path %></li>
+    17:         <li><%= link_to "About", about_path %></li>
+    18:         <li><%= link_to "Users", user_show_path %></li>
+    19:         <% if user_signed_in? %>
+    20:             
+    21:             
+  app/views/layouts/_header.html.erb:18:in `_app_views_layouts__header_html_erb___2101961633701889206_70283289689200'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___4059451084053953927_70283300316620'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.5ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (38.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 46.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-24 10:42:52 +0200
+
+
+Started GET "/members" for 127.0.0.1 at 2014-07-24 10:42:55 +0200
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/members" for 127.0.0.1 at 2014-07-24 10:44:05 +0200
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (8.5ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-24 10:44:06 +0200
+
+
+Started GET "/profile" for 127.0.0.1 at 2014-07-24 10:44:09 +0200
+Processing by UsersController#show as HTML
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms)
