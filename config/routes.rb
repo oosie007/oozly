@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/show'
+get 'users/show'  
+get 'users/index'
 
   resources :pins
 
@@ -7,7 +8,14 @@ Rails.application.routes.draw do
 root "pins#index"
 get "about" => "pages#about"
 
+
+
+# Things for the Users Resource (not the Devise User stuff) - For the Profile
+
+
+
 get 'users/:user_id' => 'users#show', as: :profile
+get 'users/index' => 'users#index', as: :members
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,11 @@
+<H1> All the users </H1>
+
+
+	<% @users.each do |user| %>
+    
+      <div class="panel-body">
+       <strong><%= link_to user.name, profile_path(:user_id=>user.id)%></strong> 
+
+        
+</div>
+<% end %>
