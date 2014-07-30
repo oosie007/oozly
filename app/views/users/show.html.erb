@@ -1,11 +1,11 @@
-<%= render 'pages/home' unless user_signed_in? %>
+
 <div id="pins" class="transitions-enabled">
-  <% @pins.each do |pin| %>
+  <% @user.pins.each do |pin| %>
     <div class="box panel panel-default">
       <%= link_to image_tag(pin.image.url(:medium)), pin %>
       <div class="panel-body">
         <%= pin.description %><br/>
-        #<% if pin.user %>
+        <% if pin.user %>
         <strong><%= link_to pin.user.name, profile_path(:user_id=>pin.user.id)%></strong>
         <% end %>
         <% if pin.user == current_user %>
@@ -25,5 +25,5 @@
   <% end %>
 </div>
 <div class="center">
-   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+   <%= will_paginate @userpins, renderer: BootstrapPagination::Rails %>
 </div>

@@ -5687,3 +5687,3316 @@ Processing by PinsController#show as HTML
   Rendered pins/show.html.erb within layouts/application (2.7ms)
   Rendered layouts/_header.html.erb (0.5ms)
 Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (58.7ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 272ms (Views: 253.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 12:12:34 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:15:07 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x007ff8067aac50>:0x007ff802a65250>):
+     5:       <%= link_to image_tag(pin.image.url(:medium)), pin %>
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         <strong><%= link_to pin.user.name, user(id) if pin.user %></strong>
+     9:         <% if pin.user == current_user %>
+    10:           <div class="actions">
+    11:             <%= link_to edit_pin_path(pin) do %>
+  app/views/pins/index.html.erb:8:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351606763300'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351606763300'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:15:41 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007ff8067aac50>:0x007ff803408a78>):
+     5:       <%= link_to image_tag(pin.image.url(:medium)), pin %>
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         <strong><%= link_to pin.user.name, user if pin.user %></strong>
+     9:         <% if pin.user == current_user %>
+    10:           <div class="actions">
+    11:             <%= link_to edit_pin_path(pin) do %>
+  app/views/pins/index.html.erb:8:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351591578260'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351591578260'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:16:57 +0200
+Processing by PinsController#index as HTML
+  Rendered pins/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/oosie/Desktop/oozly/app/views/pins/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/oosie/Desktop/oozly/app/views/pins/index.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/pins/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/pins/index.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:19:21 +0200
+Processing by PinsController#index as HTML
+  Rendered pins/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/oosie/Desktop/oozly/app/views/pins/index.html.erb:9: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+....name, user_path, if pin.user );@output_buffer.safe_append='...
+...                               ^
+/Users/oosie/Desktop/oozly/app/views/pins/index.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/oosie/Desktop/oozly/app/views/pins/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/oosie/Desktop/oozly/app/views/pins/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/pins/index.html.erb:9: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+  app/views/pins/index.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+  app/views/pins/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/pins/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:20:07 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, user_path%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351640723240'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351640723240'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:21:09 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to @user.name, user_path%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351618549860'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351618549860'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:21:21 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007ff8067aac50>:0x007ff8065f2d90>):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to user.name, user_path%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351617756400'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351617756400'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:21:47 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, user_path%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351615976100'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351615976100'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:28:58 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351587310760'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351587310760'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:29:01 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users"} missing required keys: [:id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351587310760'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351587310760'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 12:30:31 +0200
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-30 12:30:50 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:31:18 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (13.4ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007ff802c058f8>:0x007ff806490718>):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351617021900'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351617021900'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 12:32:25 +0200
+
+
+Started GET "/users/id" for 127.0.0.1 at 2014-07-30 12:32:32 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=id):
+  app/controllers/users_controller.rb:3:in `show'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started GET "/users/id" for 127.0.0.1 at 2014-07-30 12:32:32 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=id):
+  app/controllers/users_controller.rb:3:in `show'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 12:33:25 +0200
+
+
+Started GET "/users/user_id" for 127.0.0.1 at 2014-07-30 12:33:28 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"user_id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_id):
+  app/controllers/users_controller.rb:3:in `show'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started GET "/users/user_id" for 127.0.0.1 at 2014-07-30 12:33:29 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"user_id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_id):
+  app/controllers/users_controller.rb:3:in `show'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:34:22 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007ff802c058f8>:0x007ff8040e9a58>):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(user)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351598326860'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351598326860'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:38:49 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:id => @user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351587615740'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351587615740'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:42:32 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:id => @user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351587615740'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351587615740'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:42:51 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:user_id => @user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351641371140'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351641371140'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:43:18 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007ff802c058f8>:0x007ff80513e7f0>):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:user_id => user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351606900840'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351606900840'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:46:54 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(@user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351598695520'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351598695520'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:50:13 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil} missing required keys: [:id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(@user_id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351614876420'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351614876420'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:52:03 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :id=>nil} missing required keys: [:id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(@user_id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351642164500'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351642164500'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:52:41 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:user_id => @user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351587275680'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351587275680'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 35.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 12:53:56 +0200
+
+
+Started GET "/users/user_id" for 127.0.0.1 at 2014-07-30 12:53:59 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"user_id"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_id):
+  app/controllers/users_controller.rb:3:in `show'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/users/user_id" for 127.0.0.1 at 2014-07-30 12:53:59 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"user_id"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_id):
+  app/controllers/users_controller.rb:3:in `show'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:54:48 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `user_id' for #<User:0x007ff80942f438>):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(current_user.user_id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351642046020'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351642046020'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:55:21 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:user_id=>@user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351587144900'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351587144900'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:55:36 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :user_id=>nil} missing required keys: [:user_id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:user_id=>@user)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351640901500'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351640901500'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (27.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 37.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 12:58:17 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 13:00:21 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :user_id=>nil} missing required keys: [:user_id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(@user)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351587259800'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351587259800'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 13:00:40 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :user_id=>nil} missing required keys: [:user_id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(@user_id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351598757940'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351598757940'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 13:01:27 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:user_id=>@user.id)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351618692260'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351618692260'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 13:01:44 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :user_id=>nil} missing required keys: [:user_id]):
+     6:       <div class="panel-body">
+     7:         <%= pin.description %><br/>
+     8:         #<% if pin.user %>
+     9:         <strong><%= link_to pin.user.name, profile_path(:user_id=>@user)%></strong>
+    10:         <% end %>
+    11:         <% if pin.user == current_user %>
+    12:           <div class="actions">
+  app/views/pins/index.html.erb:9:in `block in _app_views_pins_index_html_erb___3316407880708010475_70351617689380'
+  app/views/pins/index.html.erb:3:in `_app_views_pins_index_html_erb___3316407880708010475_70351617689380'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 13:03:35 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 13:03:36 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 13:03:42 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (48.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 76ms (Views: 66.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:41:08 +0200
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J9dQMZTgXQPtz0McPnTVMQ6g3/WRxjuYFkzfA9BkKcg="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+Processing by PinsController#index as HTML
+  Rendered pages/_home.html.erb (1.4ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (19.9ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:41:27 +0200
+
+
+Started GET "/pins?page=2" for 127.0.0.1 at 2014-07-30 16:41:33 +0200
+Processing by PinsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendered pages/_home.html.erb (0.9ms)
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (30.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pins?page=1" for 127.0.0.1 at 2014-07-30 16:41:36 +0200
+Processing by PinsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendered pages/_home.html.erb (0.3ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:41:40 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 16:44:30 +0200
+Processing by PinsController#index as HTML
+  Rendered pages/_home.html.erb (0.2ms)
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-07-30 16:44:32 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"17QN3jsweVEH3syOGe+QKsuW+2ujA7l9jSIKmvtzTbw=", "user"=>{"name"=>"Koos", "email"=>"oosmacher@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oosmacher@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-07-30 14:44:46.614074"], ["email", "oosmacher@gmail.com"], ["encrypted_password", "$2a$10$8xu.eJRHVCHxYieIeiS41erGo8mT57ANnC.AoEXZ31dz1F2qych0q"], ["name", "Koos"], ["updated_at", "2014-07-30 14:44:46.614074"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["current_sign_in_at", "2014-07-30 14:44:46.621613"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-07-30 14:44:46.621613"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-07-30 14:44:46.622585"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 94ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:44:46 +0200
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2014-07-30 16:44:51 +0200
+Processing by PinsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/_form.html.erb (5.5ms)
+  Rendered pins/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2014-07-30 16:45:20 +0200
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"17QN3jsweVEH3syOGe+QKsuW+2ujA7l9jSIKmvtzTbw=", "pin"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007ff80323b600 @tempfile=#<Tempfile:/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/RackMultipart20140730-13518-9znumi>, @original_filename="IMG_0262.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pin[image]\"; filename=\"IMG_0262.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Wonderlik"}, "commit"=>"Create Pin"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+Command :: file -b --mime '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-209aez.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi.JPG[0]'
+Command :: convert '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi.JPG[0]' -auto-orient -resize "300x300>" '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi20140730-13518-vtcz7h'
+Command :: file -b --mime '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi20140730-13518-vtcz7h'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi.JPG[0]'
+Command :: convert '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi.JPG[0]' -auto-orient -resize "100x100>" '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi20140730-13518-n3axc1'
+Command :: file -b --mime '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1azo7wi20140730-13518-n3axc1'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/var/folders/_m/0ncnflcd31dftjz8ht1j3p1w0000gn/T/bb5338bfeb21db45215493d2770a792b20140730-13518-1g3h62j.JPG'
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pins" ("created_at", "description", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-07-30 14:45:21.530237"], ["description", "Wonderlik"], ["image_content_type", "image/jpeg"], ["image_file_name", "IMG_0262.JPG"], ["image_file_size", 1176682], ["image_updated_at", "2014-07-30 14:45:20.231752"], ["updated_at", "2014-07-30 14:45:21.530237"], ["user_id", 3]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pins/14
+Completed 302 Found in 1334ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/pins/14" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:45:21 +0200
+
+
+Started GET "/pins" for 127.0.0.1 at 2014-07-30 16:45:26 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-07-30 16:45:31 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 16:48:11 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:48:13 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 16:48:40 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:48:42 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:49:26 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:49:27 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:50:25 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:50:55 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:50:56 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:51:23 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:52:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/oosie/Desktop/oozly/app/views/users/show.html.erb:15: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/oosie/Desktop/oozly/app/views/users/show.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/show.html.erb:15: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/show.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:53:19 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6: <%= @user.pins %>
+     7: 
+     8: <div id="pins" class="transitions-enabled">
+     9:   <% @pins.each do |pin| %>
+    10:     <div class="box panel panel-default">
+    11:       <%= link_to image_tag(pin.image.url(:medium)), pin %>
+    12:       <div class="panel-body">
+  app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__2640354697551310406_70351586851920'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:53:53 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined local variable or method `pins' for #<#<Class:0x007ff802c35df0>:0x007ff8091c4360>):
+     6: <%= @user.pins %>
+     7: 
+     8: <div id="pins" class="transitions-enabled">
+     9:   <% pins.each do |pin| %>
+    10:     <div class="box panel panel-default">
+    11:       <%= link_to image_tag(pin.image.url(:medium)), pin %>
+    12:       <div class="panel-body">
+  app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__2640354697551310406_70351640720980'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:54:39 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `pin' for #<User:0x007ff806710790>):
+    10:     <div class="box panel panel-default">
+    11:       <%= link_to image_tag(pin.image.url(:medium)), pin %>
+    12:       <div class="panel-body">
+    13:         <%= @user.pin.description %><br/>
+    14:         <% end %>
+  app/views/users/show.html.erb:13:in `block in _app_views_users_show_html_erb__2640354697551310406_70351618329800'
+  app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__2640354697551310406_70351618329800'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:31 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:32 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:32 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:32 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:32 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:55:32 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:55:32 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 16:58:50 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 16:58:51 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:02:32 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (The @users variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    14:         <% end %>
+    15: 
+    16: <div class="center">
+    17:    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    18: </div>        
+  app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__2640354697551310406_70351618462180'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:04:42 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (The @users variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    14:         <% end %>
+    15: 
+    16: <div class="center">
+    17:    <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+    18: </div>        
+  app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__2640354697551310406_70351617189800'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:05:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `total_pages' for #<Pin::ActiveRecord_Associations_CollectionProxy:0x007ff8037c2b50>):
+    14:         <% end %>
+    15: 
+    16: <div class="center">
+    17:    <%= will_paginate @user.pins, renderer: BootstrapPagination::Rails %>
+    18: </div>        
+  app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__2640354697551310406_70351606416940'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (7.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 17:13:21 +0200
+
+
+Started GET "/pins/5" for 127.0.0.1 at 2014-07-30 17:13:32 +0200
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2014-07-30 17:13:34 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-07-30 17:13:40 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 17:13:45 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:13:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-07-30 17:13:57 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 17:16:24 +0200
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:16:27 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.2ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 17:19:06 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 17:19:08 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 17:19:09 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 17:20:39 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 17:20:40 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (7.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 17:28:15 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 17:28:43 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 17:28:44 +0200
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:31:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: <div id="pins" class="transitions-enabled">
+    3:   <% @pins.each do |pin| %>
+    4:     <div class="box panel panel-default">
+    5:       <%= link_to image_tag(pin.image.url(:medium)), pin %>
+    6:       <div class="panel-body">
+  app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb__2640354697551310406_70351640073060'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:32:17 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (The @users variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    25:   <% end %>
+    26: </div>
+    27: <div class="center">
+    28:    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    29: </div>
+  app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__2640354697551310406_70351618004020'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 17:32:34 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 17:32:43 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-07-30 17:32:44 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 17:32:48 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.2ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:33:21 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 17:33:30 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-07-30 17:33:32 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 17:33:38 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (22.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:36:04 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPin Load (0.2ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (The @users variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    25:   <% end %>
+    26: </div>
+    27: <div class="center">
+    28:    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    29: </div>
+  app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__2640354697551310406_70351641973320'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:36:04 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (The @users variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    25:   <% end %>
+    26: </div>
+    27: <div class="center">
+    28:    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    29: </div>
+  app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__2640354697551310406_70351641605460'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:38:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPin Load (0.7ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (The @users variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    25:   <% end %>
+    26: </div>
+    27: <div class="center">
+    28:    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    29: </div>
+  app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__2640354697551310406_70351641605460'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:38:40 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.1ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (The @users variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    25:   <% end %>
+    26: </div>
+    27: <div class="center">
+    28:    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    29: </div>
+  app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__2640354697551310406_70351641605460'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:44:58 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `total_pages' for #<User:0x007ff802bfdb30>):
+    25:   <% end %>
+    26: </div>
+    27: <div class="center">
+    28:    <%= will_paginate @user, renderer: BootstrapPagination::Rails %>
+    29: </div>
+  app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__2640354697551310406_70351587358600'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:45:30 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.2ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `total_pages' for #<User:0x007ff8066baa20>):
+    25:   <% end %>
+    26: </div>
+    27: <div class="center">
+    28:    <%= will_paginate @user, renderer: BootstrapPagination::Rails %>
+    29: </div>
+  app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__2640354697551310406_70351587358600'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:45:31 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `total_pages' for #<User:0x007ff8060f91e0>):
+    25:   <% end %>
+    26: </div>
+    27: <div class="center">
+    28:    <%= will_paginate @user, renderer: BootstrapPagination::Rails %>
+    29: </div>
+  app/views/users/show.html.erb:28:in `_app_views_users_show_html_erb__2640354697551310406_70351587358600'
+
+
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/oosie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.2ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  Rendered users/show.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 25.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/masonry/transitions.css?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-07-30 17:46:03 +0200
+
+
+Started GET "/users/2?page=2" for 127.0.0.1 at 2014-07-30 17:46:19 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"page"=>"2", "user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPin Load (0.2ms)[0m  SELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pins"
+  Rendered users/show.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-30 17:46:23 +0200
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"   ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pins/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-07-30 17:46:25 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3?page=2" for 127.0.0.1 at 2014-07-30 17:46:28 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"page"=>"2", "user_id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3?page=1" for 127.0.0.1 at 2014-07-30 17:46:30 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"page"=>"1", "user_id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPin Load (0.1ms)[0m  [1mSELECT "pins".* FROM "pins"  WHERE "pins"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.5ms)

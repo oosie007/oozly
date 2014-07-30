@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
   resources :pins
 
   devise_for :users
 root "pins#index"
 get "about" => "pages#about"
+
+get 'users/:user_id' => 'users#show', as: :profile
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
